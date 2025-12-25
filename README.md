@@ -120,3 +120,15 @@ service cloud.firestore {
 ## Deploy
 - Vercel üçün `npm run build` ilə işləyir.
 - Firebase və Google Maps env dəyişənlərini əlavə edin.
+
+### Production environment vars
+Set the following environment variable in your production host (Vercel/Netlify/Heroku/etc):
+
+- `GOOGLE_MAPS_API_KEY` — server-side key (used by `/api/distance`).
+
+If you also need the Maps JavaScript SDK on the client, add:
+
+- `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` — public key for client-side usage (restrict referrers in Google Cloud Console).
+
+For Vercel: Project → Settings → Environment Variables → add `GOOGLE_MAPS_API_KEY` and redeploy.
+

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { addMinutes, format, parse } from "date-fns";
 import {
@@ -147,6 +148,9 @@ export default function PlannerPage() {
   });
   const [distanceError, setDistanceError] = React.useState<string | null>(null);
   const [confirmOpen, setConfirmOpen] = React.useState(false);
+  const [saving, setSaving] = React.useState(false);
+  const [saveError, setSaveError] = React.useState<string | null>(null);
+  const [saveSuccess, setSaveSuccess] = React.useState(false);
   const cacheRef = React.useRef<Map<string, DistanceResponse>>(new Map());
   const [loadError, setLoadError] = React.useState<string | null>(null);
 
@@ -155,16 +159,39 @@ export default function PlannerPage() {
       try {
         const tripSnap = await getDoc(doc(db, "trips", tripId));
         if (!tripSnap.exists()) return;
-        const trip = tripSnap.data() as Trip;
-        const hotelSnap = await getDocs(
-          query(
-            collection(db, "catalog_hotels"),
-            where("hotel_id", "==", trip.hotel_id)
-          )
-        );
-        if (!hotelSnap.empty) {
-          setHotel(hotelSnap.docs[0].data() as Hotel);
+        const trip = tripSnap.data() as any;
+
+        // Try several shapes for hotel info on the trip
+        if (trip.hotel && trip.hotel.lat && trip.hotel.lng) {
+          setHotel(trip.hotel as Hotel);
+        } else {
+          const hotelId = trip.hotel_id || trip.hotelId || trip.hotel?.hotel_id;
+          if (hotelId) {
+            const hotelSnap = await getDocs(
+              query(
+                collection(db, "catalog_hotels"),
+                where("hotel_id", "==", hotelId)
+              )
+            );
+            if (!hotelSnap.empty) {
+              setHotel(hotelSnap.docs[0].data() as Hotel);
+            } else {
+              // fallback to seed data if available
+              const fallbackHotel = (seedData.catalog_hotels as Hotel[]).find(
+                (h) => h.hotel_id === hotelId
+              );
+              if (fallbackHotel) setHotel(fallbackHotel);
+              else {
+                setLoadError(
+                  "Otel təyin edilməyib və ya tapılmadı. Səfər səhifəsində otel seçin."
+                );
+              }
+            }
+          } else {
+            setLoadError("Otel təyin edilməyib. Səfər səhifəsində otel seçin.");
+          }
         }
+
         const poiSnap = await getDocs(collection(db, "catalog_pois"));
         const poiFetched = poiSnap.docs.map((doc) => doc.data() as Poi);
         setPois(
@@ -401,7 +428,22 @@ export default function PlannerPage() {
     totalTravel += backTravel ?? 0;
     currentTime = addMinutes(currentTime, backTravel ?? 0);
 
-    setPlanItems(updatedItems);
+    // Only update planItems if computed results changed to avoid infinite update loops
+    const shouldUpdatePlanItems =
+      updatedItems.length !== planItems.length ||
+      updatedItems.some((u, i) => {
+        const prev = planItems[i];
+        if (!prev) return true;
+        if (prev.plannedDurationMin !== u.plannedDurationMin) return true;
+        if (prev.transportOverride !== u.transportOverride) return true;
+        // Compare computed fields
+        return JSON.stringify(prev.computed) !== JSON.stringify(u.computed);
+      });
+
+    if (shouldUpdatePlanItems) {
+      setPlanItems(updatedItems);
+    }
+
     const dayMin = totalTravel + totalVisit;
     setTotals({
       travelMin: totalTravel,
@@ -417,55 +459,93 @@ export default function PlannerPage() {
     }
   }, [planItems, startTime, transportMode, computeSchedule]);
 
-  const handleSave = async () => {
-    if (!user || !hotel) return;
-    const planId = `${tripId}_${date}`;
-    await setDoc(doc(db, "day_plans", planId), {
-      planId,
-      tripId,
-      userId: user.uid,
-      date,
-      transportModeDefault: transportMode,
-      startTime,
-      endTimePlanned: totals.endTime,
-      totalTravelMin: totals.travelMin,
-      totalVisitMin: totals.visitMin,
-      totalDayMin: totals.dayMin,
-      createdAt: serverTimestamp(),
-      updatedAt: serverTimestamp(),
-    });
+  React.useEffect(() => {
+    if (confirmOpen) {
+      setSaveError(null);
+      setSaveSuccess(false);
+    }
+  }, [confirmOpen]);
 
-    const batch = writeBatch(db);
-    planItems.forEach((item, index) => {
-      const itemId = `${planId}_${index}`;
-      batch.set(doc(db, "plan_items", itemId), {
-        itemId,
+  const handleSave = async () => {
+    // Basic validation and feedback
+    if (!user) {
+      setSaveError("Rezervasiya etmək üçün daxil olun.");
+      return;
+    }
+    if (!hotel) {
+      setSaveError(
+        "Otel təyin edilməyib. Səfər səhifəsinə keçərək oteli seçin və yenidən cəhd edin."
+      );
+      return;
+    }
+    if (!date) {
+      setSaveError("Tarix seçilməyib.");
+      return;
+    }
+    if (!planItems.length) {
+      setSaveError("Plana heç bir məkan əlavə edilməyib.");
+      return;
+    }
+
+    setSaving(true);
+    setSaveError(null);
+
+    try {
+      const planId = `${tripId}_${date}`;
+      await setDoc(doc(db, "day_plans", planId), {
         planId,
-        userId: user.uid,
-        orderIndex: index,
-        itemType: item.itemType,
-        refId: item.refId,
-        plannedDurationMin: item.plannedDurationMin,
-        note: "",
-        transportOverride: item.transportOverride,
-        computed: item.computed,
-      });
-      batch.set(doc(db, "bookings", `${itemId}_booking`), {
-        bookingId: `${itemId}_booking`,
-        userId: user.uid,
         tripId,
-        planId,
-        itemId,
-        itemType: item.itemType,
-        refId: item.refId,
+        userId: user.uid,
         date,
-        status_az: item.itemType === "restaurant" ? "Rezerv edildi" : "Bron edildi",
-        price_azn: item.itemType === "restaurant" ? 0 : 0,
+        transportModeDefault: transportMode,
+        startTime,
+        endTimePlanned: totals.endTime,
+        totalTravelMin: totals.travelMin,
+        totalVisitMin: totals.visitMin,
+        totalDayMin: totals.dayMin,
         createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
       });
-    });
-    await batch.commit();
-    setConfirmOpen(false);
+
+      const batch = writeBatch(db);
+      planItems.forEach((item, index) => {
+        const itemId = `${planId}_${index}`;
+        batch.set(doc(db, "plan_items", itemId), {
+          itemId,
+          planId,
+          userId: user.uid,
+          orderIndex: index,
+          itemType: item.itemType,
+          refId: item.refId,
+          plannedDurationMin: item.plannedDurationMin,
+          note: "",
+          transportOverride: item.transportOverride,
+          computed: item.computed,
+        });
+        batch.set(doc(db, "bookings", `${itemId}_booking`), {
+          bookingId: `${itemId}_booking`,
+          userId: user.uid,
+          tripId,
+          planId,
+          itemId,
+          itemType: item.itemType,
+          refId: item.refId,
+          date,
+          status_az: item.itemType === "restaurant" ? "Rezerv edildi" : "Bron edildi",
+          price_azn: item.itemType === "restaurant" ? 0 : 0,
+          createdAt: serverTimestamp(),
+        });
+      });
+      await batch.commit();
+
+      setSaveSuccess(true);
+      setConfirmOpen(false);
+    } catch (err) {
+      console.error(err);
+      setSaveError("Saxlanılan zaman xəta baş verdi. Yenidən cəhd edin.");
+    } finally {
+      setSaving(false);
+    }
   };
 
   const showLateWarning = totals.endTime && totals.endTime > "22:00";
@@ -631,6 +711,18 @@ export default function PlannerPage() {
             )}
             <div className="grid gap-3 md:grid-cols-2">
               <div>
+                <label className="text-sm font-medium">Otel</label>
+                {hotel ? (
+                  <div className="text-sm text-slate-700">
+                    {hotel.name} · <Link href={`/app/trip/${tripId}`} className="underline text-emerald-700">Dəyiş</Link>
+                  </div>
+                ) : (
+                  <div className="text-sm text-yellow-700">
+                    Otel təyin edilməyib. <Link href={`/app/trip/${tripId}`} className="underline text-emerald-700">Səfər səhifəsinə keç</Link>
+                  </div>
+                )}
+              </div>
+              <div>
                 <label className="text-sm font-medium">Başlama saatı</label>
                 <Input
                   type="time"
@@ -795,11 +887,38 @@ export default function PlannerPage() {
             Günü təsdiqləmək istəyirsiniz? Bu zaman {planItems.length} rezerv/bron
             yaradılacaq.
           </p>
+
+          {saveError && (
+            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+              {saveError}
+            </div>
+          )}
+
+          {!user && (
+            <div className="rounded-lg border border-yellow-200 bg-yellow-50 p-3 text-sm text-yellow-700">
+              Rezervasiya etmək üçün daxil olun.
+            </div>
+          )}
+
+          {!hotel && (
+            <div className="rounded-lg border border-yellow-200 bg-yellow-50 p-3 text-sm text-yellow-700">
+              Otel təyin edilməyib. <Link href={`/app/trip/${tripId}`} className="underline">Səfər səhifəsinə keç</Link> və otel əlavə edin.
+            </div>
+          )}
+
+          {saveSuccess && (
+            <div className="rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-700">
+              Plan uğurla yadda saxlandı.
+            </div>
+          )}
+
           <DialogFooter>
-            <Button variant="outline" onClick={() => setConfirmOpen(false)}>
+            <Button variant="outline" onClick={() => setConfirmOpen(false)} disabled={saving}>
               Ləğv et
             </Button>
-            <Button onClick={handleSave}>Təsdiqlə</Button>
+            <Button onClick={handleSave} disabled={!user || saving}>
+              {saving ? "Yadda saxlanır..." : "Təsdiqlə"}
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
