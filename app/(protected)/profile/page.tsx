@@ -6,7 +6,6 @@ import {
   doc,
   getDoc,
   setDoc,
-  updateDoc,
   collection,
   getDocs,
   where,
@@ -55,7 +54,12 @@ export default function ProfilePage() {
       const tripsSnap = await getDocs(
         query(collection(db, "trips"), where("userId", "==", user.uid))
       );
-      setTrips(tripsSnap.docs.map((doc) => ({ tripId: doc.id, ...(doc.data() as Trip) })));
+      setTrips(
+        tripsSnap.docs.map((docSnap) => {
+          const data = docSnap.data() as Omit<Trip, "tripId">;
+          return { tripId: docSnap.id, ...data };
+        })
+      );
     };
     load();
   }, [user]);
