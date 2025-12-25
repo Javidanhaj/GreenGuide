@@ -139,8 +139,6 @@ export default function HeatmapPage() {
       batch.set(checkinRef, {
         checkinId: checkinRef.id,
         poi_id: poiId,
-        lat: poi.lat,
-        lng: poi.lng,
         timestamp: timestamp.toISOString(),
         userAnonId: anonId,
       });
