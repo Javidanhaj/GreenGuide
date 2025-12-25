@@ -659,7 +659,7 @@ export default function PlannerPage() {
 
             <div className="space-y-3">
               <div className="rounded-lg border border-slate-200 bg-slate-100 p-3 text-sm">
-                Otel -> Günə başla ({startTime})
+                Otel - Günə başla ({startTime})
               </div>
               {planItems.map((item, index) => (
                 <div
