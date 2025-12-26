@@ -1,8 +1,8 @@
-# GREEN GUIDE KARABAKH
+# GREEN GUIDE: KARABAKH
 
 Qarabağ üçün davamlı turizm planlaşdırıcısı.
 
-## Texnoloji yığın
+## Tech Stack
 - Next.js 14 (App Router) + TypeScript
 - TailwindCSS + shadcn/ui (sadə komponentlər)
 - Firebase Auth + Firestore (modular v9)
