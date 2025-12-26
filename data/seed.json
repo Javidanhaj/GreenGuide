@@ -2,14 +2,14 @@
   "catalog_hotels": [
     {
       "hotel_id": "H001",
-      "name": "Xocalı Green Hotel 01",
-      "city": "Xocalı",
+      "name": "Şuşa Palace Hotel",
+      "city": "Şuşa",
       "district": "Mərkəz",
-      "lat": 39.520009,
-      "lng": 46.830035,
-      "stars": 3,
-      "price_level": "orta",
-      "green_score": 93,
+      "lat": 39.6881,
+      "lng": 46.8516,
+      "stars": 5,
+      "price_level": "yüksək",
+      "green_score": 92,
       "amenities": [
         "Spa",
         "Panorama",
@@ -19,14 +19,14 @@
     },
     {
       "hotel_id": "H002",
-      "name": "Laçın Green Hotel 02",
-      "city": "Laçın",
-      "district": "Şərq",
-      "lat": 39.837537,
-      "lng": 46.535757,
-      "stars": 3,
+      "name": "Xojali Heritage Hotel",
+      "city": "Xojali",
+      "district": "Mərkəz",
+      "lat": 39.9876,
+      "lng": 46.5432,
+      "stars": 4,
       "price_level": "orta",
-      "green_score": 86,
+      "green_score": 88,
       "amenities": [
         "WiFi",
         "Velosiped",
@@ -36,14 +36,14 @@
     },
     {
       "hotel_id": "H003",
-      "name": "Zəngilan Green Hotel 03",
-      "city": "Zəngilan",
-      "district": "Şimal",
-      "lat": 39.859367,
-      "lng": 46.833829,
-      "stars": 3,
+      "name": "Agdam Eco Resort",
+      "city": "Ağdam",
+      "district": "Mərkəz",
+      "lat": 39.9987,
+      "lng": 46.7654,
+      "stars": 4,
       "price_level": "orta",
-      "green_score": 92,
+      "green_score": 90,
       "amenities": [
         "Günəş paneli",
         "Ekoloji təmizlik",
@@ -53,14 +53,14 @@
     },
     {
       "hotel_id": "H004",
-      "name": "Ağdam Green Hotel 04",
-      "city": "Ağdam",
-      "district": "Aşağı",
-      "lat": 39.769276,
-      "lng": 46.611295,
+      "name": "Kelbajr Mountain Inn",
+      "city": "Kəlbəcər",
+      "district": "Mərkəz",
+      "lat": 40.1234,
+      "lng": 47.3210,
       "stars": 3,
-      "price_level": "yüksək",
-      "green_score": 81,
+      "price_level": "orta",
+      "green_score": 89,
       "amenities": [
         "Velosiped",
         "Günəş paneli",
@@ -70,2085 +70,413 @@
     },
     {
       "hotel_id": "H005",
-      "name": "Tərtər Green Hotel 05",
-      "city": "Tərtər",
+      "name": "Lalqaya Boutique Hotel",
+      "city": "Laçin",
       "district": "Mərkəz",
-      "lat": 40.278493,
-      "lng": 46.954241,
-      "stars": 5,
+      "lat": 39.8421,
+      "lng": 46.5187,
+      "stars": 4,
       "price_level": "yüksək",
-      "green_score": 90,
+      "green_score": 87,
       "amenities": [
         "Panorama",
         "Velosiped",
         "Spa",
         "WiFi"
       ]
-    },
-    {
-      "hotel_id": "H006",
-      "name": "Şuşa Green Hotel 06",
-      "city": "Şuşa",
-      "district": "Yuxarı",
-      "lat": 39.682319,
-      "lng": 46.847266,
-      "stars": 3,
-      "price_level": "orta",
-      "green_score": 73,
-      "amenities": [
-        "Günəş paneli",
-        "Ekoloji təmizlik",
-        "Transfer",
-        "Vegetarian menyu"
-      ]
-    },
-    {
-      "hotel_id": "H007",
-      "name": "Kəlbəcər Green Hotel 07",
-      "city": "Kəlbəcər",
-      "district": "Cənub",
-      "lat": 39.784217,
-      "lng": 47.30421,
-      "stars": 5,
-      "price_level": "premium",
-      "green_score": 90,
-      "amenities": [
-        "Spa",
-        "Velosiped",
-        "Panorama",
-        "Vegetarian menyu"
-      ]
-    },
-    {
-      "hotel_id": "H008",
-      "name": "Tərtər Green Hotel 08",
-      "city": "Tərtər",
-      "district": "Yuxarı",
-      "lat": 39.695849,
-      "lng": 47.054712,
-      "stars": 4,
-      "price_level": "premium",
-      "green_score": 92,
-      "amenities": [
-        "Transfer",
-        "Panorama",
-        "Ekoloji təmizlik",
-        "WiFi"
-      ]
-    },
-    {
-      "hotel_id": "H009",
-      "name": "Ağdam Green Hotel 09",
-      "city": "Ağdam",
-      "district": "Aşağı",
-      "lat": 39.52568,
-      "lng": 46.878544,
-      "stars": 4,
-      "price_level": "orta",
-      "green_score": 76,
-      "amenities": [
-        "Panorama",
-        "Spa",
-        "Vegetarian menyu",
-        "Transfer"
-      ]
-    },
-    {
-      "hotel_id": "H010",
-      "name": "Zəngilan Green Hotel 10",
-      "city": "Zəngilan",
-      "district": "Yuxarı",
-      "lat": 39.867081,
-      "lng": 46.817856,
-      "stars": 3,
-      "price_level": "premium",
-      "green_score": 87,
-      "amenities": [
-        "Velosiped",
-        "Panorama",
-        "Vegetarian menyu",
-        "Transfer"
-      ]
-    },
-    {
-      "hotel_id": "H011",
-      "name": "Xankəndi Green Hotel 11",
-      "city": "Xankəndi",
-      "district": "Qərb",
-      "lat": 39.789597,
-      "lng": 47.696791,
-      "stars": 3,
-      "price_level": "premium",
-      "green_score": 85,
-      "amenities": [
-        "Spa",
-        "Günəş paneli",
-        "WiFi",
-        "Panorama"
-      ]
-    },
-    {
-      "hotel_id": "H012",
-      "name": "Kəlbəcər Green Hotel 12",
-      "city": "Kəlbəcər",
-      "district": "Yuxarı",
-      "lat": 39.627986,
-      "lng": 47.316577,
-      "stars": 5,
-      "price_level": "orta",
-      "green_score": 82,
-      "amenities": [
-        "Günəş paneli",
-        "Velosiped",
-        "Transfer",
-        "Vegetarian menyu"
-      ]
-    },
-    {
-      "hotel_id": "H013",
-      "name": "Füzuli Green Hotel 13",
-      "city": "Füzuli",
-      "district": "Şərq",
-      "lat": 40.188624,
-      "lng": 46.513777,
-      "stars": 5,
-      "price_level": "orta",
-      "green_score": 91,
-      "amenities": [
-        "Velosiped",
-        "Günəş paneli",
-        "Panorama",
-        "Ekoloji təmizlik"
-      ]
-    },
-    {
-      "hotel_id": "H014",
-      "name": "Laçın Green Hotel 14",
-      "city": "Laçın",
-      "district": "Cənub",
-      "lat": 39.847812,
-      "lng": 47.044468,
-      "stars": 5,
-      "price_level": "premium",
-      "green_score": 78,
-      "amenities": [
-        "Ekoloji təmizlik",
-        "Velosiped",
-        "WiFi",
-        "Vegetarian menyu"
-      ]
-    },
-    {
-      "hotel_id": "H015",
-      "name": "Xocalı Green Hotel 15",
-      "city": "Xocalı",
-      "district": "Şərq",
-      "lat": 39.987176,
-      "lng": 46.683407,
-      "stars": 3,
-      "price_level": "premium",
-      "green_score": 94,
-      "amenities": [
-        "WiFi",
-        "Velosiped",
-        "Ekoloji təmizlik",
-        "Transfer"
-      ]
-    },
-    {
-      "hotel_id": "H016",
-      "name": "Şuşa Green Hotel 16",
-      "city": "Şuşa",
-      "district": "Mərkəz",
-      "lat": 40.243279,
-      "lng": 47.554466,
-      "stars": 4,
-      "price_level": "orta",
-      "green_score": 71,
-      "amenities": [
-        "Transfer",
-        "Velosiped",
-        "WiFi",
-        "Panorama"
-      ]
-    },
-    {
-      "hotel_id": "H017",
-      "name": "Hadrut Green Hotel 17",
-      "city": "Hadrut",
-      "district": "Qərb",
-      "lat": 40.152819,
-      "lng": 47.673581,
-      "stars": 5,
-      "price_level": "orta",
-      "green_score": 74,
-      "amenities": [
-        "Vegetarian menyu",
-        "Velosiped",
-        "Spa",
-        "Ekoloji təmizlik"
-      ]
-    },
-    {
-      "hotel_id": "H018",
-      "name": "Tərtər Green Hotel 18",
-      "city": "Tərtər",
-      "district": "Aşağı",
-      "lat": 39.985275,
-      "lng": 47.657235,
-      "stars": 5,
-      "price_level": "premium",
-      "green_score": 92,
-      "amenities": [
-        "Transfer",
-        "Panorama",
-        "Ekoloji təmizlik",
-        "Vegetarian menyu"
-      ]
-    },
-    {
-      "hotel_id": "H019",
-      "name": "Xocalı Green Hotel 19",
-      "city": "Xocalı",
-      "district": "Yuxarı",
-      "lat": 39.798736,
-      "lng": 47.579537,
-      "stars": 4,
-      "price_level": "orta",
-      "green_score": 77,
-      "amenities": [
-        "Transfer",
-        "WiFi",
-        "Ekoloji təmizlik",
-        "Günəş paneli"
-      ]
-    },
-    {
-      "hotel_id": "H020",
-      "name": "Xankəndi Green Hotel 20",
-      "city": "Xankəndi",
-      "district": "Şərq",
-      "lat": 39.684092,
-      "lng": 46.764261,
-      "stars": 3,
-      "price_level": "premium",
-      "green_score": 90,
-      "amenities": [
-        "WiFi",
-        "Spa",
-        "Vegetarian menyu",
-        "Panorama"
-      ]
-    },
-    {
-      "hotel_id": "H021",
-      "name": "Cəbrayıl Green Hotel 21",
-      "city": "Cəbrayıl",
-      "district": "Mərkəz",
-      "lat": 39.911325,
-      "lng": 46.834173,
-      "stars": 4,
-      "price_level": "orta",
-      "green_score": 87,
-      "amenities": [
-        "Ekoloji təmizlik",
-        "Panorama",
-        "Velosiped",
-        "Günəş paneli"
-      ]
-    },
-    {
-      "hotel_id": "H022",
-      "name": "Qubadlı Green Hotel 22",
-      "city": "Qubadlı",
-      "district": "Şimal",
-      "lat": 40.127696,
-      "lng": 47.468996,
-      "stars": 3,
-      "price_level": "orta",
-      "green_score": 73,
-      "amenities": [
-        "Günəş paneli",
-        "Ekoloji təmizlik",
-        "Transfer",
-        "Panorama"
-      ]
-    },
-    {
-      "hotel_id": "H023",
-      "name": "Qubadlı Green Hotel 23",
-      "city": "Qubadlı",
-      "district": "Aşağı",
-      "lat": 40.083261,
-      "lng": 47.308037,
-      "stars": 5,
-      "price_level": "orta",
-      "green_score": 71,
-      "amenities": [
-        "Günəş paneli",
-        "Panorama",
-        "Ekoloji təmizlik",
-        "WiFi"
-      ]
-    },
-    {
-      "hotel_id": "H024",
-      "name": "Ağdam Green Hotel 24",
-      "city": "Ağdam",
-      "district": "Şimal",
-      "lat": 39.652167,
-      "lng": 47.038336,
-      "stars": 4,
-      "price_level": "orta",
-      "green_score": 78,
-      "amenities": [
-        "Vegetarian menyu",
-        "Spa",
-        "WiFi",
-        "Transfer"
-      ]
-    },
-    {
-      "hotel_id": "H025",
-      "name": "Tərtər Green Hotel 25",
-      "city": "Tərtər",
-      "district": "Mərkəz",
-      "lat": 39.540471,
-      "lng": 47.699139,
-      "stars": 3,
-      "price_level": "orta",
-      "green_score": 94,
-      "amenities": [
-        "Transfer",
-        "Spa",
-        "Vegetarian menyu",
-        "Panorama"
-      ]
-    }
-  ],
-  "catalog_restaurants": [
-    {
-      "restaurant_id": "R001",
-      "name": "Qubadlı Eko Mətbəx 01",
-      "city": "Qubadlı",
-      "district": "Şimal",
-      "lat": 40.178185,
-      "lng": 47.573176,
-      "cuisine": [
-        "Qarabağ",
-        "Balıq"
-      ],
-      "price_level": "orta",
-      "green_score": 84,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R002",
-      "name": "Hadrut Eko Mətbəx 02",
-      "city": "Hadrut",
-      "district": "Yuxarı",
-      "lat": 40.29588,
-      "lng": 47.122499,
-      "cuisine": [
-        "Balıq",
-        "Qarabağ"
-      ],
-      "price_level": "orta",
-      "green_score": 78,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R003",
-      "name": "Tərtər Eko Mətbəx 03",
-      "city": "Tərtər",
-      "district": "Mərkəz",
-      "lat": 40.073178,
-      "lng": 46.474315,
-      "cuisine": [
-        "Qril",
-        "Balıq"
-      ],
-      "price_level": "orta",
-      "green_score": 63,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R004",
-      "name": "Laçın Eko Mətbəx 04",
-      "city": "Laçın",
-      "district": "Şərq",
-      "lat": 39.461165,
-      "lng": 47.520365,
-      "cuisine": [
-        "Balıq",
-        "Azərbaycan"
-      ],
-      "price_level": "orta",
-      "green_score": 62,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R005",
-      "name": "Xankəndi Eko Mətbəx 05",
-      "city": "Xankəndi",
-      "district": "Şərq",
-      "lat": 39.870504,
-      "lng": 47.615118,
-      "cuisine": [
-        "Qarabağ",
-        "Vegetarian"
-      ],
-      "price_level": "orta",
-      "green_score": 76,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R006",
-      "name": "Füzuli Eko Mətbəx 06",
-      "city": "Füzuli",
-      "district": "Qərb",
-      "lat": 39.684559,
-      "lng": 47.377424,
-      "cuisine": [
-        "Azərbaycan",
-        "Qril"
-      ],
-      "price_level": "yüksək",
-      "green_score": 66,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R007",
-      "name": "Kəlbəcər Eko Mətbəx 07",
-      "city": "Kəlbəcər",
-      "district": "Cənub",
-      "lat": 40.192778,
-      "lng": 47.543051,
-      "cuisine": [
-        "Vegetarian",
-        "Qril"
-      ],
-      "price_level": "orta",
-      "green_score": 88,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R008",
-      "name": "Xocalı Eko Mətbəx 08",
-      "city": "Xocalı",
-      "district": "Şərq",
-      "lat": 39.407041,
-      "lng": 47.462235,
-      "cuisine": [
-        "Vegetarian",
-        "Azərbaycan"
-      ],
-      "price_level": "orta",
-      "green_score": 76,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R009",
-      "name": "Kəlbəcər Eko Mətbəx 09",
-      "city": "Kəlbəcər",
-      "district": "Cənub",
-      "lat": 39.653581,
-      "lng": 46.673819,
-      "cuisine": [
-        "Vegetarian",
-        "Qarabağ"
-      ],
-      "price_level": "yüksək",
-      "green_score": 92,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R010",
-      "name": "Şuşa Eko Mətbəx 10",
-      "city": "Şuşa",
-      "district": "Mərkəz",
-      "lat": 39.970856,
-      "lng": 47.478153,
-      "cuisine": [
-        "Azərbaycan",
-        "Qril"
-      ],
-      "price_level": "yüksək",
-      "green_score": 68,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pullu"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R011",
-      "name": "Qubadlı Eko Mətbəx 11",
-      "city": "Qubadlı",
-      "district": "Şərq",
-      "lat": 40.035101,
-      "lng": 47.129179,
-      "cuisine": [
-        "Azərbaycan",
-        "Qril"
-      ],
-      "price_level": "orta",
-      "green_score": 62,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R012",
-      "name": "Şuşa Eko Mətbəx 12",
-      "city": "Şuşa",
-      "district": "Cənub",
-      "lat": 39.728186,
-      "lng": 47.613014,
-      "cuisine": [
-        "Azərbaycan",
-        "Vegetarian"
-      ],
-      "price_level": "orta",
-      "green_score": 75,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R013",
-      "name": "Tərtər Eko Mətbəx 13",
-      "city": "Tərtər",
-      "district": "Aşağı",
-      "lat": 39.76574,
-      "lng": 47.20686,
-      "cuisine": [
-        "Qarabağ",
-        "Qril"
-      ],
-      "price_level": "orta",
-      "green_score": 71,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R014",
-      "name": "Cəbrayıl Eko Mətbəx 14",
-      "city": "Cəbrayıl",
-      "district": "Aşağı",
-      "lat": 40.237734,
-      "lng": 47.442906,
-      "cuisine": [
-        "Qarabağ",
-        "Vegetarian"
-      ],
-      "price_level": "orta",
-      "green_score": 66,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R015",
-      "name": "Ağdam Eko Mətbəx 15",
-      "city": "Ağdam",
-      "district": "Şimal",
-      "lat": 40.134928,
-      "lng": 46.998394,
-      "cuisine": [
-        "Vegetarian",
-        "Qarabağ"
-      ],
-      "price_level": "orta",
-      "green_score": 61,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R016",
-      "name": "Füzuli Eko Mətbəx 16",
-      "city": "Füzuli",
-      "district": "Aşağı",
-      "lat": 39.462479,
-      "lng": 47.405325,
-      "cuisine": [
-        "Vegetarian",
-        "Balıq"
-      ],
-      "price_level": "yüksək",
-      "green_score": 61,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pullu"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R017",
-      "name": "Füzuli Eko Mətbəx 17",
-      "city": "Füzuli",
-      "district": "Mərkəz",
-      "lat": 39.497562,
-      "lng": 46.964933,
-      "cuisine": [
-        "Vegetarian",
-        "Balıq"
-      ],
-      "price_level": "orta",
-      "green_score": 84,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R018",
-      "name": "Hadrut Eko Mətbəx 18",
-      "city": "Hadrut",
-      "district": "Qərb",
-      "lat": 39.401522,
-      "lng": 47.603248,
-      "cuisine": [
-        "Qril",
-        "Qarabağ"
-      ],
-      "price_level": "yüksək",
-      "green_score": 87,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R019",
-      "name": "Xocalı Eko Mətbəx 19",
-      "city": "Xocalı",
-      "district": "Aşağı",
-      "lat": 39.512163,
-      "lng": 47.570061,
-      "cuisine": [
-        "Qril",
-        "Vegetarian"
-      ],
-      "price_level": "yüksək",
-      "green_score": 80,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R020",
-      "name": "Ağdam Eko Mətbəx 20",
-      "city": "Ağdam",
-      "district": "Qərb",
-      "lat": 39.998436,
-      "lng": 46.892889,
-      "cuisine": [
-        "Qarabağ",
-        "Vegetarian"
-      ],
-      "price_level": "yüksək",
-      "green_score": 60,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R021",
-      "name": "Xankəndi Eko Mətbəx 21",
-      "city": "Xankəndi",
-      "district": "Şərq",
-      "lat": 39.989235,
-      "lng": 47.004485,
-      "cuisine": [
-        "Balıq",
-        "Qarabağ"
-      ],
-      "price_level": "yüksək",
-      "green_score": 70,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": false
-    },
-    {
-      "restaurant_id": "R022",
-      "name": "Xocalı Eko Mətbəx 22",
-      "city": "Xocalı",
-      "district": "Yuxarı",
-      "lat": 39.957335,
-      "lng": 46.521403,
-      "cuisine": [
-        "Qarabağ",
-        "Vegetarian"
-      ],
-      "price_level": "orta",
-      "green_score": 72,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R023",
-      "name": "Qubadlı Eko Mətbəx 23",
-      "city": "Qubadlı",
-      "district": "Şərq",
-      "lat": 40.164764,
-      "lng": 46.494677,
-      "cuisine": [
-        "Balıq",
-        "Qarabağ"
-      ],
-      "price_level": "yüksək",
-      "green_score": 91,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pulsuz"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R024",
-      "name": "Hadrut Eko Mətbəx 24",
-      "city": "Hadrut",
-      "district": "Mərkəz",
-      "lat": 40.203394,
-      "lng": 47.518573,
-      "cuisine": [
-        "Azərbaycan",
-        "Balıq"
-      ],
-      "price_level": "orta",
-      "green_score": 71,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 20,
-        "booking_type": "pullu"
-      },
-      "sponsored": true
-    },
-    {
-      "restaurant_id": "R025",
-      "name": "Ağdam Eko Mətbəx 25",
-      "city": "Ağdam",
-      "district": "Aşağı",
-      "lat": 39.509223,
-      "lng": 46.573341,
-      "cuisine": [
-        "Balıq",
-        "Vegetarian"
-      ],
-      "price_level": "yüksək",
-      "green_score": 92,
-      "menu_url": "https://example.com/menu",
-      "opening_hours": "09:00-23:00",
-      "booking": {
-        "reservable": true,
-        "price_azn": 10,
-        "booking_type": "pullu"
-      },
-      "sponsored": false
     }
   ],
   "catalog_pois": [
     {
       "poi_id": "P001",
-      "name": "Hadrut Eko Məkan 01",
-      "city": "Hadrut",
-      "district": "Aşağı",
-      "lat": 39.774674,
-      "lng": 46.662868,
-      "category": "Təbiət",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 15,
+      "name": "Şuşa Old Town Historic District",
+      "city": "Şuşa",
+      "district": "Mərkəz",
+      "lat": 39.6881,
+      "lng": 46.8516,
+      "category": "Tarix",
+      "avg_visit_min": 180,
+      "entry_fee_azn": 10,
       "eco_sensitivity": "yüksək",
       "green_metrics": {
-        "renewable_energy_pct": 55,
-        "recycling_rate_pct": 47,
-        "carbon_kg_per_visit": 1.7,
-        "tree_care_score": 95,
-        "overall_green_score": 83
+        "renewable_energy_pct": 65,
+        "recycling_rate_pct": 72,
+        "carbon_kg_per_visit": 1.3,
+        "tree_care_score": 88,
+        "overall_green_score": 85
       },
       "sponsored": false,
       "booking": {
         "required": false,
-        "price_azn": 15,
+        "price_azn": 10,
         "booking_type": "bilet"
       },
-      "opening_hours": "10:00-19:00",
+      "opening_hours": "09:00-18:00",
       "info_url": "https://example.com/info"
     },
     {
       "poi_id": "P002",
-      "name": "Laçın Eko Məkan 02",
-      "city": "Laçın",
-      "district": "Şimal",
-      "lat": 39.450831,
-      "lng": 46.836249,
-      "category": "Təbiət",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 0,
+      "name": "Xojali Memorial & Museum",
+      "city": "Xojali",
+      "district": "Mərkəz",
+      "lat": 39.9876,
+      "lng": 46.5432,
+      "category": "Muzey",
+      "avg_visit_min": 120,
+      "entry_fee_azn": 5,
       "eco_sensitivity": "orta",
       "green_metrics": {
-        "renewable_energy_pct": 66,
-        "recycling_rate_pct": 51,
-        "carbon_kg_per_visit": 2.0,
-        "tree_care_score": 76,
-        "overall_green_score": 68
+        "renewable_energy_pct": 58,
+        "recycling_rate_pct": 68,
+        "carbon_kg_per_visit": 1.8,
+        "tree_care_score": 82,
+        "overall_green_score": 84
       },
       "sponsored": false,
       "booking": {
         "required": false,
-        "price_azn": 25,
+        "price_azn": 5,
         "booking_type": "bilet"
       },
-      "opening_hours": "10:00-19:00",
+      "opening_hours": "10:00-17:00",
       "info_url": "https://example.com/info"
     },
     {
       "poi_id": "P003",
-      "name": "Hadrut Eko Məkan 03",
-      "city": "Hadrut",
+      "name": "Agdam Panopticon Ruins",
+      "city": "Ağdam",
       "district": "Mərkəz",
-      "lat": 40.156732,
-      "lng": 47.371832,
-      "category": "Panorama",
-      "avg_visit_min": 150,
+      "lat": 39.9987,
+      "lng": 46.7654,
+      "category": "Tarix",
+      "avg_visit_min": 90,
       "entry_fee_azn": 0,
-      "eco_sensitivity": "orta",
+      "eco_sensitivity": "aşağı",
       "green_metrics": {
-        "renewable_energy_pct": 59,
-        "recycling_rate_pct": 78,
-        "carbon_kg_per_visit": 1.6,
-        "tree_care_score": 76,
-        "overall_green_score": 79
+        "renewable_energy_pct": 70,
+        "recycling_rate_pct": 55,
+        "carbon_kg_per_visit": 1.2,
+        "tree_care_score": 75,
+        "overall_green_score": 80
       },
       "sponsored": false,
       "booking": {
         "required": false,
-        "price_azn": 25,
-        "booking_type": "pullu"
+        "price_azn": 0,
+        "booking_type": "pulsuz"
       },
-      "opening_hours": "10:00-19:00",
+      "opening_hours": "08:00-20:00",
       "info_url": "https://example.com/info"
     },
     {
       "poi_id": "P004",
-      "name": "Şuşa Eko Məkan 04",
-      "city": "Şuşa",
-      "district": "Qərb",
-      "lat": 39.63613,
-      "lng": 47.250799,
-      "category": "Panorama",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 79,
-        "recycling_rate_pct": 64,
-        "carbon_kg_per_visit": 0.6,
-        "tree_care_score": 75,
-        "overall_green_score": 66
-      },
-      "sponsored": true,
-      "booking": {
-        "required": false,
-        "price_azn": 5,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P005",
-      "name": "Kəlbəcər Eko Məkan 05",
+      "name": "Kelbajr Cave Monastery",
       "city": "Kəlbəcər",
       "district": "Mərkəz",
-      "lat": 39.560156,
-      "lng": 46.758294,
-      "category": "Panorama",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 10,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 57,
-        "recycling_rate_pct": 78,
-        "carbon_kg_per_visit": 3.1,
-        "tree_care_score": 76,
-        "overall_green_score": 81
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 0,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P006",
-      "name": "Tərtər Eko Məkan 06",
-      "city": "Tərtər",
-      "district": "Mərkəz",
-      "lat": 40.299908,
-      "lng": 46.789944,
+      "lat": 40.1234,
+      "lng": 47.3210,
       "category": "Tarix",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 52,
-        "recycling_rate_pct": 83,
-        "carbon_kg_per_visit": 0.6,
-        "tree_care_score": 59,
-        "overall_green_score": 80
-      },
-      "sponsored": true,
-      "booking": {
-        "required": true,
-        "price_azn": 5,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P007",
-      "name": "Hadrut Eko Məkan 07",
-      "city": "Hadrut",
-      "district": "Cənub",
-      "lat": 40.066898,
-      "lng": 46.534905,
-      "category": "Park",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 5,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 46,
-        "recycling_rate_pct": 67,
-        "carbon_kg_per_visit": 0.6,
-        "tree_care_score": 69,
-        "overall_green_score": 89
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 0,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P008",
-      "name": "Hadrut Eko Məkan 08",
-      "city": "Hadrut",
-      "district": "Aşağı",
-      "lat": 39.927242,
-      "lng": 46.442662,
-      "category": "Muzey",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 74,
-        "recycling_rate_pct": 57,
-        "carbon_kg_per_visit": 2.3,
-        "tree_care_score": 54,
-        "overall_green_score": 86
-      },
-      "sponsored": true,
-      "booking": {
-        "required": false,
-        "price_azn": 25,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P009",
-      "name": "Zəngilan Eko Məkan 09",
-      "city": "Zəngilan",
-      "district": "Cənub",
-      "lat": 39.935585,
-      "lng": 47.46019,
-      "category": "Təbiət",
       "avg_visit_min": 150,
-      "entry_fee_azn": 5,
+      "entry_fee_azn": 8,
       "eco_sensitivity": "yüksək",
       "green_metrics": {
-        "renewable_energy_pct": 73,
-        "recycling_rate_pct": 71,
-        "carbon_kg_per_visit": 1.2,
-        "tree_care_score": 84,
-        "overall_green_score": 95
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 15,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P010",
-      "name": "Laçın Eko Məkan 10",
-      "city": "Laçın",
-      "district": "Cənub",
-      "lat": 40.181631,
-      "lng": 46.641409,
-      "category": "Panorama",
-      "avg_visit_min": 150,
-      "entry_fee_azn": 10,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 71,
-        "recycling_rate_pct": 84,
-        "carbon_kg_per_visit": 1.4,
-        "tree_care_score": 81,
-        "overall_green_score": 78
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 15,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P011",
-      "name": "Xankəndi Eko Məkan 11",
-      "city": "Xankəndi",
-      "district": "Yuxarı",
-      "lat": 40.180107,
-      "lng": 47.078107,
-      "category": "Park",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 86,
-        "recycling_rate_pct": 56,
-        "carbon_kg_per_visit": 1.8,
-        "tree_care_score": 65,
-        "overall_green_score": 95
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 25,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P012",
-      "name": "Laçın Eko Məkan 12",
-      "city": "Laçın",
-      "district": "Cənub",
-      "lat": 39.521596,
-      "lng": 47.268502,
-      "category": "Muzey",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "yüksək",
-      "green_metrics": {
-        "renewable_energy_pct": 73,
-        "recycling_rate_pct": 52,
-        "carbon_kg_per_visit": 1.6,
-        "tree_care_score": 85,
-        "overall_green_score": 86
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 15,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P013",
-      "name": "Füzuli Eko Məkan 13",
-      "city": "Füzuli",
-      "district": "Şimal",
-      "lat": 39.420656,
-      "lng": 46.569618,
-      "category": "Tarix",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 5,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 87,
-        "recycling_rate_pct": 60,
-        "carbon_kg_per_visit": 1.2,
-        "tree_care_score": 87,
-        "overall_green_score": 83
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 15,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P014",
-      "name": "Cəbrayıl Eko Məkan 14",
-      "city": "Cəbrayıl",
-      "district": "Şimal",
-      "lat": 39.602268,
-      "lng": 47.291226,
-      "category": "Təbiət",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 75,
-        "recycling_rate_pct": 48,
-        "carbon_kg_per_visit": 2.4,
-        "tree_care_score": 58,
-        "overall_green_score": 96
-      },
-      "sponsored": true,
-      "booking": {
-        "required": true,
-        "price_azn": 15,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P015",
-      "name": "Qubadlı Eko Məkan 15",
-      "city": "Qubadlı",
-      "district": "Qərb",
-      "lat": 39.640706,
-      "lng": 47.651697,
-      "category": "Muzey",
-      "avg_visit_min": 150,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 65,
-        "recycling_rate_pct": 61,
-        "carbon_kg_per_visit": 0.7,
-        "tree_care_score": 90,
-        "overall_green_score": 68
-      },
-      "sponsored": true,
-      "booking": {
-        "required": false,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P016",
-      "name": "Laçın Eko Məkan 16",
-      "city": "Laçın",
-      "district": "Şərq",
-      "lat": 40.064443,
-      "lng": 47.148845,
-      "category": "Park",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 68,
-        "recycling_rate_pct": 49,
-        "carbon_kg_per_visit": 2.8,
-        "tree_care_score": 77,
-        "overall_green_score": 84
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P017",
-      "name": "Xocalı Eko Məkan 17",
-      "city": "Xocalı",
-      "district": "Şimal",
-      "lat": 39.564646,
-      "lng": 46.413662,
-      "category": "Təbiət",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 40,
-        "recycling_rate_pct": 56,
-        "carbon_kg_per_visit": 1.7,
-        "tree_care_score": 88,
-        "overall_green_score": 95
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 15,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P018",
-      "name": "Füzuli Eko Məkan 18",
-      "city": "Füzuli",
-      "district": "Yuxarı",
-      "lat": 40.159607,
-      "lng": 46.399652,
-      "category": "Təbiət",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 5,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 47,
-        "recycling_rate_pct": 64,
-        "carbon_kg_per_visit": 1.1,
-        "tree_care_score": 59,
-        "overall_green_score": 82
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P019",
-      "name": "Füzuli Eko Məkan 19",
-      "city": "Füzuli",
-      "district": "Şərq",
-      "lat": 40.048958,
-      "lng": 47.09689,
-      "category": "Muzey",
-      "avg_visit_min": 150,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 84,
-        "recycling_rate_pct": 49,
-        "carbon_kg_per_visit": 2.4,
-        "tree_care_score": 67,
-        "overall_green_score": 96
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 25,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P020",
-      "name": "Cəbrayıl Eko Məkan 20",
-      "city": "Cəbrayıl",
-      "district": "Şərq",
-      "lat": 39.550368,
-      "lng": 46.427858,
-      "category": "Park",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 10,
-      "eco_sensitivity": "yüksək",
-      "green_metrics": {
-        "renewable_energy_pct": 42,
+        "renewable_energy_pct": 72,
         "recycling_rate_pct": 78,
-        "carbon_kg_per_visit": 2.5,
-        "tree_care_score": 80,
-        "overall_green_score": 93
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 25,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P021",
-      "name": "Qubadlı Eko Məkan 21",
-      "city": "Qubadlı",
-      "district": "Mərkəz",
-      "lat": 39.77001,
-      "lng": 46.871687,
-      "category": "Muzey",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 5,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 66,
-        "recycling_rate_pct": 74,
-        "carbon_kg_per_visit": 1.8,
+        "carbon_kg_per_visit": 0.9,
         "tree_care_score": 92,
-        "overall_green_score": 90
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 25,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P022",
-      "name": "Cəbrayıl Eko Məkan 22",
-      "city": "Cəbrayıl",
-      "district": "Cənub",
-      "lat": 39.623274,
-      "lng": 47.658259,
-      "category": "Panorama",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 43,
-        "recycling_rate_pct": 42,
-        "carbon_kg_per_visit": 1.9,
-        "tree_care_score": 89,
-        "overall_green_score": 96
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 5,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P023",
-      "name": "Tərtər Eko Məkan 23",
-      "city": "Tərtər",
-      "district": "Şimal",
-      "lat": 40.227673,
-      "lng": 46.913363,
-      "category": "Panorama",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 0,
-      "eco_sensitivity": "yüksək",
-      "green_metrics": {
-        "renewable_energy_pct": 78,
-        "recycling_rate_pct": 81,
-        "carbon_kg_per_visit": 1.1,
-        "tree_care_score": 60,
-        "overall_green_score": 84
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 0,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P024",
-      "name": "Laçın Eko Məkan 24",
-      "city": "Laçın",
-      "district": "Qərb",
-      "lat": 40.247061,
-      "lng": 47.206794,
-      "category": "Təbiət",
-      "avg_visit_min": 150,
-      "entry_fee_azn": 10,
-      "eco_sensitivity": "yüksək",
-      "green_metrics": {
-        "renewable_energy_pct": 85,
-        "recycling_rate_pct": 47,
-        "carbon_kg_per_visit": 1.6,
-        "tree_care_score": 80,
-        "overall_green_score": 95
-      },
-      "sponsored": false,
-      "booking": {
-        "required": true,
-        "price_azn": 25,
-        "booking_type": "pulsuz"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P025",
-      "name": "Xankəndi Eko Məkan 25",
-      "city": "Xankəndi",
-      "district": "Şərq",
-      "lat": 40.046293,
-      "lng": 46.491112,
-      "category": "Tarix",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 90,
-        "recycling_rate_pct": 62,
-        "carbon_kg_per_visit": 1.2,
-        "tree_care_score": 50,
-        "overall_green_score": 83
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 5,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P026",
-      "name": "Tərtər Eko Məkan 26",
-      "city": "Tərtər",
-      "district": "Qərb",
-      "lat": 39.645124,
-      "lng": 47.072684,
-      "category": "Park",
-      "avg_visit_min": 150,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 52,
-        "recycling_rate_pct": 74,
-        "carbon_kg_per_visit": 1.1,
-        "tree_care_score": 74,
-        "overall_green_score": 79
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 0,
-        "booking_type": "pullu"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P027",
-      "name": "Hadrut Eko Məkan 27",
-      "city": "Hadrut",
-      "district": "Qərb",
-      "lat": 40.005228,
-      "lng": 47.435972,
-      "category": "Panorama",
-      "avg_visit_min": 90,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "aşağı",
-      "green_metrics": {
-        "renewable_energy_pct": 48,
-        "recycling_rate_pct": 62,
-        "carbon_kg_per_visit": 3.1,
-        "tree_care_score": 71,
-        "overall_green_score": 71
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 0,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P028",
-      "name": "Qubadlı Eko Məkan 28",
-      "city": "Qubadlı",
-      "district": "Mərkəz",
-      "lat": 40.022444,
-      "lng": 46.87397,
-      "category": "Təbiət",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 15,
-      "eco_sensitivity": "orta",
-      "green_metrics": {
-        "renewable_energy_pct": 61,
-        "recycling_rate_pct": 69,
-        "carbon_kg_per_visit": 2.4,
-        "tree_care_score": 91,
-        "overall_green_score": 70
-      },
-      "sponsored": false,
-      "booking": {
-        "required": false,
-        "price_azn": 15,
-        "booking_type": "bilet"
-      },
-      "opening_hours": "10:00-19:00",
-      "info_url": "https://example.com/info"
-    },
-    {
-      "poi_id": "P029",
-      "name": "Hadrut Eko Məkan 29",
-      "city": "Hadrut",
-      "district": "Aşağı",
-      "lat": 39.787947,
-      "lng": 47.057422,
-      "category": "Park",
-      "avg_visit_min": 60,
-      "entry_fee_azn": 5,
-      "eco_sensitivity": "yüksək",
-      "green_metrics": {
-        "renewable_energy_pct": 83,
-        "recycling_rate_pct": 48,
-        "carbon_kg_per_visit": 3.2,
-        "tree_care_score": 55,
         "overall_green_score": 92
       },
       "sponsored": false,
       "booking": {
         "required": true,
-        "price_azn": 25,
-        "booking_type": "pulsuz"
+        "price_azn": 8,
+        "booking_type": "bilet"
       },
-      "opening_hours": "10:00-19:00",
+      "opening_hours": "09:00-18:00",
       "info_url": "https://example.com/info"
     },
     {
-      "poi_id": "P030",
-      "name": "Hadrut Eko Məkan 30",
-      "city": "Hadrut",
-      "district": "Cənub",
-      "lat": 40.203424,
-      "lng": 46.364387,
-      "category": "Tarix",
-      "avg_visit_min": 120,
-      "entry_fee_azn": 10,
-      "eco_sensitivity": "orta",
+      "poi_id": "P005",
+      "name": "Lalqaya Protected Area",
+      "city": "Laçin",
+      "district": "Mərkəz",
+      "lat": 39.8421,
+      "lng": 46.5187,
+      "category": "Təbiət",
+      "avg_visit_min": 240,
+      "entry_fee_azn": 12,
+      "eco_sensitivity": "yüksək",
       "green_metrics": {
-        "renewable_energy_pct": 67,
-        "recycling_rate_pct": 39,
-        "carbon_kg_per_visit": 1.2,
-        "tree_care_score": 76,
-        "overall_green_score": 76
+        "renewable_energy_pct": 85,
+        "recycling_rate_pct": 82,
+        "carbon_kg_per_visit": 0.7,
+        "tree_care_score": 96,
+        "overall_green_score": 94
       },
-      "sponsored": true,
+      "sponsored": false,
       "booking": {
         "required": true,
-        "price_azn": 25,
+        "price_azn": 12,
         "booking_type": "bilet"
       },
-      "opening_hours": "10:00-19:00",
+      "opening_hours": "08:00-19:00",
+      "info_url": "https://example.com/info"
+    },
+    {
+      "poi_id": "P006",
+      "name": "Alatəmir Ridge Scenic Overlook",
+      "city": "Ağdam",
+      "district": "Şimal",
+      "lat": 40.0543,
+      "lng": 46.8765,
+      "category": "Panorama",
+      "avg_visit_min": 60,
+      "entry_fee_azn": 0,
+      "eco_sensitivity": "orta",
+      "green_metrics": {
+        "renewable_energy_pct": 60,
+        "recycling_rate_pct": 50,
+        "carbon_kg_per_visit": 1.4,
+        "tree_care_score": 80,
+        "overall_green_score": 83
+      },
+      "sponsored": false,
+      "booking": {
+        "required": false,
+        "price_azn": 0,
+        "booking_type": "pulsuz"
+      },
+      "opening_hours": "sunrise-sunset",
+      "info_url": "https://example.com/info"
+    },
+    {
+      "poi_id": "P007",
+      "name": "Xojali National Park Flora Area",
+      "city": "Xojali",
+      "district": "Şimal",
+      "lat": 39.9654,
+      "lng": 46.6234,
+      "category": "Təbiət",
+      "avg_visit_min": 120,
+      "entry_fee_azn": 6,
+      "eco_sensitivity": "yüksək",
+      "green_metrics": {
+        "renewable_energy_pct": 75,
+        "recycling_rate_pct": 80,
+        "carbon_kg_per_visit": 1.1,
+        "tree_care_score": 94,
+        "overall_green_score": 91
+      },
+      "sponsored": false,
+      "booking": {
+        "required": false,
+        "price_azn": 6,
+        "booking_type": "pulsuz"
+      },
+      "opening_hours": "08:00-18:00",
+      "info_url": "https://example.com/info"
+    },
+    {
+      "poi_id": "P008",
+      "name": "Shusha Carpet Weaving Center",
+      "city": "Şuşa",
+      "district": "Mərkəz",
+      "lat": 39.6905,
+      "lng": 46.8634,
+      "category": "Mədəniyyət",
+      "avg_visit_min": 90,
+      "entry_fee_azn": 5,
+      "eco_sensitivity": "orta",
+      "green_metrics": {
+        "renewable_energy_pct": 50,
+        "recycling_rate_pct": 65,
+        "carbon_kg_per_visit": 1.9,
+        "tree_care_score": 76,
+        "overall_green_score": 82
+      },
+      "sponsored": false,
+      "booking": {
+        "required": false,
+        "price_azn": 5,
+        "booking_type": "pulsuz"
+      },
+      "opening_hours": "10:00-17:00",
+      "info_url": "https://example.com/info"
+    },
+    {
+      "poi_id": "P009",
+      "name": "Lachin Restoration Area Visitors Center",
+      "city": "Laçin",
+      "district": "Mərkəz",
+      "lat": 39.8543,
+      "lng": 46.5098,
+      "category": "Mərkəz",
+      "avg_visit_min": 60,
+      "entry_fee_azn": 0,
+      "eco_sensitivity": "orta",
+      "green_metrics": {
+        "renewable_energy_pct": 65,
+        "recycling_rate_pct": 70,
+        "carbon_kg_per_visit": 1.5,
+        "tree_care_score": 84,
+        "overall_green_score": 86
+      },
+      "sponsored": false,
+      "booking": {
+        "required": false,
+        "price_azn": 0,
+        "booking_type": "pulsuz"
+      },
+      "opening_hours": "09:00-17:00",
+      "info_url": "https://example.com/info"
+    },
+    {
+      "poi_id": "P010",
+      "name": "Ganja-Gabala Highway Scenic Routes",
+      "city": "Ağdam",
+      "district": "Şərq",
+      "lat": 40.1234,
+      "lng": 47.0987,
+      "category": "Panorama",
+      "avg_visit_min": 120,
+      "entry_fee_azn": 0,
+      "eco_sensitivity": "aşağı",
+      "green_metrics": {
+        "renewable_energy_pct": 55,
+        "recycling_rate_pct": 45,
+        "carbon_kg_per_visit": 2.8,
+        "tree_care_score": 78,
+        "overall_green_score": 79
+      },
+      "sponsored": false,
+      "booking": {
+        "required": false,
+        "price_azn": 0,
+        "booking_type": "pulsuz"
+      },
+      "opening_hours": "06:00-21:00",
       "info_url": "https://example.com/info"
     }
   ],
   "poi_ratings_agg": [
     {
       "poi_id": "P001",
-      "avg_rating": 4.6,
-      "review_count": 294,
-      "checkins_30d": 697,
-      "popularity_score": 69,
+      "avg_rating": 4.8,
+      "review_count": 542,
+      "checkins_30d": 876,
+      "popularity_score": 92,
       "top_tags": [
         "tarix",
-        "ailə",
-        "panorama"
-      ]
-    },
-    {
-      "poi_id": "P002",
-      "avg_rating": 4.1,
-      "review_count": 170,
-      "checkins_30d": 782,
-      "popularity_score": 60,
-      "top_tags": [
-        "ailə",
-        "panorama",
+        "mədəniyyət",
         "foto"
       ]
     },
     {
-      "poi_id": "P003",
-      "avg_rating": 4.4,
-      "review_count": 77,
-      "checkins_30d": 552,
-      "popularity_score": 82,
+      "poi_id": "P002",
+      "avg_rating": 4.5,
+      "review_count": 389,
+      "checkins_30d": 654,
+      "popularity_score": 88,
       "top_tags": [
-        "foto",
-        "panorama",
+        "tarix",
+        "memoryal",
         "ailə"
+      ]
+    },
+    {
+      "poi_id": "P003",
+      "avg_rating": 4.3,
+      "review_count": 267,
+      "checkins_30d": 721,
+      "popularity_score": 85,
+      "top_tags": [
+        "tarix",
+        "panorama",
+        "foto"
       ]
     },
     {
       "poi_id": "P004",
       "avg_rating": 4.9,
-      "review_count": 393,
-      "checkins_30d": 356,
-      "popularity_score": 89,
+      "review_count": 612,
+      "checkins_30d": 843,
+      "popularity_score": 94,
       "top_tags": [
-        "panorama",
+        "monastir",
         "tarix",
-        "ailə"
+        "eko"
       ]
     },
     {
       "poi_id": "P005",
-      "avg_rating": 4.7,
-      "review_count": 94,
-      "checkins_30d": 342,
-      "popularity_score": 84,
+      "avg_rating": 4.8,
+      "review_count": 478,
+      "checkins_30d": 902,
+      "popularity_score": 96,
       "top_tags": [
-        "foto",
-        "panorama",
+        "təbiət",
+        "eko",
         "ailə"
       ]
     },
     {
       "poi_id": "P006",
-      "avg_rating": 4.1,
-      "review_count": 398,
-      "checkins_30d": 402,
-      "popularity_score": 61,
+      "avg_rating": 4.6,
+      "review_count": 321,
+      "checkins_30d": 715,
+      "popularity_score": 90,
       "top_tags": [
-        "ailə",
         "panorama",
-        "eko"
+        "foto",
+        "doğa"
       ]
     },
     {
       "poi_id": "P007",
-      "avg_rating": 4.4,
-      "review_count": 391,
-      "checkins_30d": 896,
-      "popularity_score": 63,
+      "avg_rating": 4.7,
+      "review_count": 445,
+      "checkins_30d": 834,
+      "popularity_score": 91,
       "top_tags": [
-        "foto",
-        "ailə",
-        "tarix"
+        "təbiət",
+        "flora",
+        "eko"
       ]
     },
     {
       "poi_id": "P008",
-      "avg_rating": 4.7,
-      "review_count": 157,
-      "checkins_30d": 721,
-      "popularity_score": 82,
+      "avg_rating": 4.4,
+      "review_count": 298,
+      "checkins_30d": 556,
+      "popularity_score": 84,
       "top_tags": [
-        "tarix",
-        "foto",
-        "panorama"
+        "mədəniyyət",
+        "sənət",
+        "xalca"
       ]
     },
     {
       "poi_id": "P009",
-      "avg_rating": 4.1,
-      "review_count": 377,
-      "checkins_30d": 797,
-      "popularity_score": 68,
+      "avg_rating": 4.2,
+      "review_count": 187,
+      "checkins_30d": 432,
+      "popularity_score": 78,
       "top_tags": [
-        "eko",
-        "foto",
-        "tarix"
+        "mərkəz",
+        "məlumat",
+        "ailə"
       ]
     },
     {
       "poi_id": "P010",
-      "avg_rating": 4.7,
-      "review_count": 57,
-      "checkins_30d": 693,
-      "popularity_score": 83,
-      "top_tags": [
-        "tarix",
-        "eko",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P011",
-      "avg_rating": 4.2,
-      "review_count": 252,
-      "checkins_30d": 279,
-      "popularity_score": 72,
-      "top_tags": [
-        "tarix",
-        "panorama",
-        "ailə"
-      ]
-    },
-    {
-      "poi_id": "P012",
-      "avg_rating": 4.4,
-      "review_count": 179,
-      "checkins_30d": 950,
-      "popularity_score": 70,
-      "top_tags": [
-        "panorama",
-        "ailə",
-        "tarix"
-      ]
-    },
-    {
-      "poi_id": "P013",
-      "avg_rating": 4.6,
-      "review_count": 213,
-      "checkins_30d": 923,
-      "popularity_score": 67,
-      "top_tags": [
-        "ailə",
-        "eko",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P014",
-      "avg_rating": 4.6,
-      "review_count": 155,
-      "checkins_30d": 980,
-      "popularity_score": 85,
-      "top_tags": [
-        "foto",
-        "panorama",
-        "eko"
-      ]
-    },
-    {
-      "poi_id": "P015",
-      "avg_rating": 4.7,
-      "review_count": 47,
-      "checkins_30d": 370,
-      "popularity_score": 94,
-      "top_tags": [
-        "eko",
-        "ailə",
-        "tarix"
-      ]
-    },
-    {
-      "poi_id": "P016",
       "avg_rating": 4.5,
-      "review_count": 384,
-      "checkins_30d": 368,
-      "popularity_score": 97,
+      "review_count": 523,
+      "checkins_30d": 789,
+      "popularity_score": 87,
       "top_tags": [
-        "ailə",
+        "yol",
         "panorama",
-        "eko"
-      ]
-    },
-    {
-      "poi_id": "P017",
-      "avg_rating": 4.5,
-      "review_count": 281,
-      "checkins_30d": 125,
-      "popularity_score": 95,
-      "top_tags": [
-        "panorama",
-        "tarix",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P018",
-      "avg_rating": 3.9,
-      "review_count": 277,
-      "checkins_30d": 817,
-      "popularity_score": 79,
-      "top_tags": [
-        "ailə",
-        "eko",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P019",
-      "avg_rating": 3.8,
-      "review_count": 59,
-      "checkins_30d": 411,
-      "popularity_score": 91,
-      "top_tags": [
-        "eko",
-        "foto",
-        "ailə"
-      ]
-    },
-    {
-      "poi_id": "P020",
-      "avg_rating": 4.8,
-      "review_count": 109,
-      "checkins_30d": 497,
-      "popularity_score": 89,
-      "top_tags": [
-        "panorama",
-        "ailə",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P021",
-      "avg_rating": 4.6,
-      "review_count": 119,
-      "checkins_30d": 524,
-      "popularity_score": 66,
-      "top_tags": [
-        "ailə",
-        "foto",
-        "tarix"
-      ]
-    },
-    {
-      "poi_id": "P022",
-      "avg_rating": 3.8,
-      "review_count": 229,
-      "checkins_30d": 322,
-      "popularity_score": 88,
-      "top_tags": [
-        "ailə",
-        "tarix",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P023",
-      "avg_rating": 3.9,
-      "review_count": 391,
-      "checkins_30d": 476,
-      "popularity_score": 94,
-      "top_tags": [
-        "panorama",
-        "eko",
-        "tarix"
-      ]
-    },
-    {
-      "poi_id": "P024",
-      "avg_rating": 4.1,
-      "review_count": 102,
-      "checkins_30d": 968,
-      "popularity_score": 89,
-      "top_tags": [
-        "eko",
-        "tarix",
-        "panorama"
-      ]
-    },
-    {
-      "poi_id": "P025",
-      "avg_rating": 4.5,
-      "review_count": 50,
-      "checkins_30d": 151,
-      "popularity_score": 81,
-      "top_tags": [
-        "tarix",
-        "foto",
-        "panorama"
-      ]
-    },
-    {
-      "poi_id": "P026",
-      "avg_rating": 4.0,
-      "review_count": 323,
-      "checkins_30d": 312,
-      "popularity_score": 97,
-      "top_tags": [
-        "tarix",
-        "foto",
-        "ailə"
-      ]
-    },
-    {
-      "poi_id": "P027",
-      "avg_rating": 4.7,
-      "review_count": 345,
-      "checkins_30d": 102,
-      "popularity_score": 77,
-      "top_tags": [
-        "tarix",
-        "foto",
-        "panorama"
-      ]
-    },
-    {
-      "poi_id": "P028",
-      "avg_rating": 4.1,
-      "review_count": 129,
-      "checkins_30d": 212,
-      "popularity_score": 61,
-      "top_tags": [
-        "tarix",
-        "eko",
-        "foto"
-      ]
-    },
-    {
-      "poi_id": "P029",
-      "avg_rating": 4.7,
-      "review_count": 161,
-      "checkins_30d": 702,
-      "popularity_score": 80,
-      "top_tags": [
-        "eko",
-        "tarix",
-        "ailə"
-      ]
-    },
-    {
-      "poi_id": "P030",
-      "avg_rating": 3.9,
-      "review_count": 255,
-      "checkins_30d": 638,
-      "popularity_score": 67,
-      "top_tags": [
-        "eko",
-        "ailə",
-        "tarix"
+        "səyahət"
       ]
     }
   ]

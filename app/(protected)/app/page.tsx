@@ -103,24 +103,12 @@ export default function DashboardPage() {
       const poiSnap = await getDocs(
         query(collection(db, "catalog_pois"), where("sponsored", "==", true))
       );
-      const restaurantSnap = await getDocs(
-        query(
-          collection(db, "catalog_restaurants"),
-          where("sponsored", "==", true)
-        )
-      );
       const promotedItems: SponsoredItem[] = [
         ...poiSnap.docs.map((doc) => ({
           id: doc.data().poi_id as string,
           name: doc.data().name as string,
           city: doc.data().city as string,
           type: "poi" as const,
-        })),
-        ...restaurantSnap.docs.map((doc) => ({
-          id: doc.data().restaurant_id as string,
-          name: doc.data().name as string,
-          city: doc.data().city as string,
-          type: "restaurant" as const,
         })),
       ];
       setPromoted(promotedItems.slice(0, 10));

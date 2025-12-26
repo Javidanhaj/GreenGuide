@@ -42,7 +42,6 @@ const batchWrite = async (collectionName: string, items: Record<string, any>[]) 
 
 const run = async () => {
   await batchWrite("catalog_hotels", seed.catalog_hotels);
-  await batchWrite("catalog_restaurants", seed.catalog_restaurants);
   await batchWrite("catalog_pois", seed.catalog_pois);
   await batchWrite("poi_ratings_agg", seed.poi_ratings_agg);
   console.log("Seed tamamlandı.");

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { addMinutes, format, parse } from "date-fns";
 import {
   collection,
@@ -67,22 +67,6 @@ interface Poi {
   info_url: string;
 }
 
-interface Restaurant {
-  restaurant_id: string;
-  name: string;
-  city: string;
-  district: string;
-  lat: number;
-  lng: number;
-  cuisine: string[];
-  price_level: string;
-  green_score: number;
-  menu_url: string;
-  opening_hours: string;
-  booking: { reservable: boolean; price_azn: number; booking_type: string };
-  sponsored: boolean;
-}
-
 interface RatingAgg {
   poi_id: string;
   avg_rating: number;
@@ -91,7 +75,7 @@ interface RatingAgg {
 
 interface PlanItem {
   itemId: string;
-  itemType: "poi" | "restaurant";
+  itemType: "poi";
   refId: string;
   name: string;
   lat: number;
@@ -119,17 +103,29 @@ const transportModes = [
   { value: "transit", label: "Tranzit" },
 ];
 
+// Format minutes to display "X min" if less than 60, otherwise "X hours Y min"
+const formatDuration = (minutes: number): string => {
+  if (minutes < 60) {
+    return `${minutes} dəq`;
+  }
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  if (mins === 0) {
+    return `${hours}s`;
+  }
+  return `${hours}s ${mins}dəq`;
+};
+
 export default function PlannerPage() {
   const params = useParams();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const { user } = useAuth();
   const tripId = params.id as string;
   const date = searchParams.get("date") || "";
   const [hotel, setHotel] = React.useState<Hotel | null>(null);
   const [pois, setPois] = React.useState<Poi[]>([]);
-  const [restaurants, setRestaurants] = React.useState<Restaurant[]>([]);
   const [ratings, setRatings] = React.useState<Record<string, RatingAgg>>({});
-  const [filterType, setFilterType] = React.useState("all");
   const [filterCity, setFilterCity] = React.useState("all");
   const [filterCategory, setFilterCategory] = React.useState("all");
   const [sponsorFirst, setSponsorFirst] = React.useState(false);
@@ -197,17 +193,6 @@ export default function PlannerPage() {
         setPois(
           poiFetched.length ? poiFetched : (seedData.catalog_pois as Poi[])
         );
-        const restaurantSnap = await getDocs(
-          collection(db, "catalog_restaurants")
-        );
-        const restaurantFetched = restaurantSnap.docs.map(
-          (doc) => doc.data() as Restaurant
-        );
-        setRestaurants(
-          restaurantFetched.length
-            ? restaurantFetched
-            : (seedData.catalog_restaurants as Restaurant[])
-        );
         const ratingSnap = await getDocs(collection(db, "poi_ratings_agg"));
         const ratingMap: Record<string, RatingAgg> = {};
         if (ratingSnap.empty) {
@@ -226,7 +211,6 @@ export default function PlannerPage() {
           "Məlumatlar yüklənmədi. Firebase bağlantısını yoxlayın (adblocker ola bilər)."
         );
         setPois(seedData.catalog_pois as Poi[]);
-        setRestaurants(seedData.catalog_restaurants as Restaurant[]);
         const ratingMap: Record<string, RatingAgg> = {};
         (seedData.poi_ratings_agg as RatingAgg[]).forEach((item) => {
           ratingMap[item.poi_id] = item;
@@ -254,22 +238,8 @@ export default function PlannerPage() {
       rating: ratings[poi.poi_id]?.avg_rating ?? 4.3,
       popularity: ratings[poi.poi_id]?.popularity_score ?? 70,
     }));
-    const restaurantItems = restaurants.map((rest) => ({
-      id: rest.restaurant_id,
-      type: "restaurant" as const,
-      name: rest.name,
-      data: rest,
-      city: rest.city,
-      category: rest.cuisine[0] || "Restoran",
-      sponsored: rest.sponsored,
-      rating: Math.min(5, 3.5 + rest.green_score / 40),
-      popularity: Math.round(rest.green_score * 2),
-    }));
 
-    let items = [...poiItems, ...restaurantItems];
-    if (filterType !== "all") {
-      items = items.filter((item) => item.type === filterType);
-    }
+    let items = [...poiItems];
     if (filterCity !== "all") {
       items = items.filter((item) => item.city === filterCity);
     }
@@ -286,14 +256,8 @@ export default function PlannerPage() {
       items = items.sort((a, b) => b.popularity - a.popularity);
     } else {
       items = items.sort((a, b) => {
-        const aScore =
-          a.type === "poi"
-            ? a.data.green_metrics.overall_green_score
-            : a.data.green_score;
-        const bScore =
-          b.type === "poi"
-            ? b.data.green_metrics.overall_green_score
-            : b.data.green_score;
+        const aScore = a.data.green_metrics.overall_green_score;
+        const bScore = b.data.green_metrics.overall_green_score;
         return bScore - aScore;
       });
     }
@@ -303,8 +267,7 @@ export default function PlannerPage() {
     return items;
   }, [
     pois,
-    restaurants,
-    filterType,
+
     filterCity,
     filterCategory,
     sortBy,
@@ -531,8 +494,8 @@ export default function PlannerPage() {
           itemType: item.itemType,
           refId: item.refId,
           date,
-          status_az: item.itemType === "restaurant" ? "Rezerv edildi" : "Bron edildi",
-          price_azn: item.itemType === "restaurant" ? 0 : 0,
+          status_az: "Bron edildi",
+          price_azn: 0,
           createdAt: serverTimestamp(),
         });
       });
@@ -540,6 +503,11 @@ export default function PlannerPage() {
 
       setSaveSuccess(true);
       setConfirmOpen(false);
+      
+      // Redirect back to trip page after successful save
+      setTimeout(() => {
+        router.push(`/app/trip/${tripId}`);
+      }, 500);
     } catch (err) {
       console.error(err);
       setSaveError("Saxlanılan zaman xəta baş verdi. Yenidən cəhd edin.");
@@ -569,14 +537,6 @@ export default function PlannerPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <Select
-                value={filterType}
-                onChange={(e) => setFilterType(e.target.value)}
-              >
-                <option value="all">Hamısı</option>
-                <option value="poi">Məkan (POI)</option>
-                <option value="restaurant">Restoran</option>
-              </Select>
               <Select
                 value={filterCity}
                 onChange={(e) => setFilterCity(e.target.value)}
@@ -635,33 +595,23 @@ export default function PlannerPage() {
                   </p>
                   <div className="mt-3 rounded-lg bg-slate-50 p-3 text-xs text-slate-600">
                     <p className="font-semibold text-slate-700">Yaşıl göstəricilər</p>
-                    {item.type === "poi" ? (
-                      <div className="mt-2 grid grid-cols-2 gap-2">
-                        <span>
-                          Ümumi: {item.data.green_metrics.overall_green_score}
-                        </span>
-                        <span>
-                          Enerji: {item.data.green_metrics.renewable_energy_pct}%
-                        </span>
-                        <span>
-                          Təkrar emal: {item.data.green_metrics.recycling_rate_pct}%
-                        </span>
-                        <span>
-                          Karbon: {item.data.green_metrics.carbon_kg_per_visit} kg
-                        </span>
-                        <span>
-                          Ağac qayğı: {item.data.green_metrics.tree_care_score}
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="mt-2 grid grid-cols-2 gap-2">
-                        <span>Ümumi: {item.data.green_score}</span>
-                        <span>Enerji: 62%</span>
-                        <span>Təkrar emal: 48%</span>
-                        <span>Karbon: 1.2 kg</span>
-                        <span>Ağac qayğı: 70</span>
-                      </div>
-                    )}
+                    <div className="mt-2 grid grid-cols-2 gap-2">
+                      <span>
+                        Ümumi: {item.data.green_metrics.overall_green_score}
+                      </span>
+                      <span>
+                        Enerji: {item.data.green_metrics.renewable_energy_pct}%
+                      </span>
+                      <span>
+                        Təkrar emal: {item.data.green_metrics.recycling_rate_pct}%
+                      </span>
+                      <span>
+                        Karbon: {item.data.green_metrics.carbon_kg_per_visit} kg
+                      </span>
+                      <span>
+                        Ağac qayğı: {item.data.green_metrics.tree_care_score}
+                      </span>
+                    </div>
                   </div>
                   <div className="mt-3 text-xs text-slate-600">
                     <p>İş saatları: {item.data.opening_hours}</p>
@@ -669,26 +619,14 @@ export default function PlannerPage() {
                       Qiymət: {item.data.booking?.price_azn ?? 0} AZN ·{" "}
                       {item.data.booking?.booking_type ?? "pulsuz"}
                     </p>
-                    {item.type === "poi" && (
-                      <a
-                        href={item.data.info_url}
-                        className="text-emerald-700 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Ətraflı
-                      </a>
-                    )}
-                    {item.type === "restaurant" && (
-                      <a
-                        href={item.data.menu_url}
-                        className="text-emerald-700 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Menü
-                      </a>
-                    )}
+                    <a
+                      href={item.data.info_url}
+                      className="text-emerald-700 underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Ətraflı
+                    </a>
                   </div>
                   <Button className="mt-3" onClick={() => handleAddItem(item)}>
                     Plana əlavə et
@@ -859,9 +797,9 @@ export default function PlannerPage() {
             </div>
 
             <div className="rounded-lg border border-slate-200 bg-white p-3 text-sm">
-              <p>Ümumi səfər vaxtı: {totals.travelMin} dəq</p>
-              <p>Ümumi ziyarət vaxtı: {totals.visitMin} dəq</p>
-              <p>Günün cəmi: {totals.dayMin} dəq</p>
+              <p>Ümumi səfər vaxtı: {formatDuration(totals.travelMin)}</p>
+              <p>Ümumi ziyarət vaxtı: {formatDuration(totals.visitMin)}</p>
+              <p>Günün cəmi: {formatDuration(totals.dayMin)}</p>
               {distanceError && (
                 <p className="text-xs text-slate-500">Vaxt hesablanmayıb.</p>
               )}
